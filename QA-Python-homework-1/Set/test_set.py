@@ -19,7 +19,7 @@ def test_3(rand_set):
 
 
 def test_4(rand_set):
-    assert rand_set != rand_set.clear()
+    assert not rand_set.clear()
 
 
 @pytest.mark.parametrize('i', ({random.randint(-4, 0) in range(10)},

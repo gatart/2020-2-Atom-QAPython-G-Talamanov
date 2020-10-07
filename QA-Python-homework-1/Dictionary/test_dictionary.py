@@ -8,7 +8,7 @@ def test_1(rand_dict):
 
 
 def test_2(rand_dict):
-    assert rand_dict.clear() != rand_dict
+    assert not rand_dict.clear()
 
 
 class TestClass:
@@ -18,10 +18,10 @@ class TestClass:
 
 @pytest.mark.parametrize('i', (0, random.randint(1,4), 4))
 def test_4(i, rand_dict):
-    assert rand_dict.pop(i)
+    assert rand_dict[i] == rand_dict.pop(i)
 
 
 @pytest.mark.parametrize('i', (0, random.randint(1,4), 4))
 def test_5(i, rand_dict):
-    assert rand_dict.get(i)
+    assert rand_dict[i] == rand_dict.get(i)
 

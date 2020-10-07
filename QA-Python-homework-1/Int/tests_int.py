@@ -9,8 +9,7 @@ def test_1(random_int):
 
 
 def test_2(random_int):
-    with pytest.raises(ZeroDivisionError):
-        assert random_int / 0
+    assert random_int ** 2 == random_int * random_int
 
 
 def test_3(random_int):
@@ -25,5 +24,4 @@ class TestClass:
 @pytest.mark.parametrize('i', (5, random.randint(6, 100), 100))
 def test_5(i, random_int):
     with pytest.raises(ZeroDivisionError):
-        assert random_int / 0
         assert i / 0
