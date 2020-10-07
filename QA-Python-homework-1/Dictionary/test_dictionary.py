@@ -8,7 +8,9 @@ def test_1(rand_dict):
 
 
 def test_2(rand_dict):
-    assert not rand_dict.clear()
+    a = rand_dict
+    a.clear()
+    assert not any(a)
 
 
 class TestClass:
