@@ -6,7 +6,8 @@ from ui.pages.company_page import CompanyPage
 from ui.pages.segment_page import SegmentPage
 
 
-class AuthCase:
+@pytest.mark.ui
+class BaseCase:
     @pytest.fixture(scope='function', autouse=True)
     def setup(self, driver, request: FixtureRequest):
         self.driver = driver
