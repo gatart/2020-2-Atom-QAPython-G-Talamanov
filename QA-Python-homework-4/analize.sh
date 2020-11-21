@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-outfile=analized
+outfile=analyzed
 
 print_help(){
     cat <<EOF
@@ -46,7 +46,7 @@ else
     err 2
 fi
 
-if [ -f analized ]; then
+if [ -f analyzed ]; then
     echo -n "File '$outfile' exists, overwrite? (yes/NO): " >&2
     read answer
     if [ ! "$answer" = "y" ] && [ ! "$answer" = "yes" ]; then
