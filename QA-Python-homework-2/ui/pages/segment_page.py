@@ -13,7 +13,6 @@ class SegmentPage(AuthPage):
             self.click(locators.SegmentLocators.CREATE_LOCATOR_2)
             self.click(locators.SegmentLocators.TYPE_LOCATOR)
 
-        # self.auth_page.click(locators.SegmentLocators.CREATE_LOCATOR)
         self.click(locators.SegmentLocators.CHECKBOX_LOCATOR)
         self.click(locators.SegmentLocators.BUTTON_1_LOCATOR)
         self.input(name, locators.SegmentLocators.NAME_LOCATOR)

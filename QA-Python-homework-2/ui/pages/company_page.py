@@ -13,8 +13,7 @@ class CompanyPage(AuthPage):
         self.click(locators.CompanyLocators.FORMAT_LOCATOR)
         el = self.find(locators.CompanyLocators.UPLOAD)
         time.sleep(10)
-        path = os.path.join('\\', 'c:\\', 'PyCharm', 'technoatom-qa-python', '2020-2-Atom-QAPython-G-Talamanov',
-                            'QA-Python-homework-2', 'data', 'Smisol.jpg')
+        path = os.path.join(os.path.dirname(__file__), 'data', 'Smisol.jpg')
         el.send_keys(path)
 
         self.click(locators.CompanyLocators.LOAD_BUTTON)
